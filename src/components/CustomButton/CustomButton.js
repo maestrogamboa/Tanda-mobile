@@ -11,8 +11,6 @@ const CustomButton = ({ onPress,  text, type= "PRIMARY" }) => {
 
 const styles = StyleSheet.create ({
   container: {
-    // top: 423,
-    // left: 72,
     // width affects sign up button
     // width: '87%',
     height: 46,
@@ -27,6 +25,7 @@ const styles = StyleSheet.create ({
   container_PRIMARY: {
     backgroundColor: '#4cd964',
     width: '70%',
+    bottom: 90,
   },
 
   container_TERTIARY: {
@@ -54,7 +53,13 @@ const styles = StyleSheet.create ({
 
 text_TERTIARY: {
   color: '#030303',
+},
+
+text_PRIMARY : {
+  
 }
 })
+
+
 
 export default CustomButton

@@ -27,12 +27,14 @@ const SignInScreen = () => {
 
   
   return (
-  <ScrollView>
+  
     <View style = {styles.root}>
-      <Image source={Logo}
+     <Image source={Logo}
         style = {[styles.tandalogo, {height: height * 0.45}]} 
         resizeMode = "contain"
       />
+      
+      
       <View>
       <Text style = {styles.middleText}>Manage your rotational savings group</Text>
       </View>
@@ -52,7 +54,7 @@ const SignInScreen = () => {
         onPress= {onSignInPressed} 
       />
 
-<Text style = {styles.middleText}>Don't have an account?<Text> Sign up</Text></Text>
+      <Text style = {styles.bottomText}>Don't have an account?<Text style= {styles.middleTextTertiary} onPress= {onSignUpScreenOnePressed} type= "TERTIARY" >  Sign up</Text></Text>
 
       {/*<CustomButton 
         text= "Don't have an account?  Sign Up"  
@@ -70,7 +72,7 @@ const SignInScreen = () => {
       /> */}
         
     </View>
-</ScrollView>
+
   )
 }
 
@@ -79,17 +81,26 @@ const SignInScreen = () => {
 const styles = StyleSheet.create({
   root: {
     alignItems: 'center',
-    bottom: 25,
+    bottom: 60,
     padding : 1,
     display:'flex',
     justifyContent:'space-evenly',
-    height:'100%'
+    height:'100%',
+  
   },
+
   middleText: {
-    color: 'gray',
+    color: 'gray', 
+    bottom: 65,  
   },
+
+  middleTextTertiary: {
+    color: 'black',
+    fontWeight: 'bold',
+  },
+
   tandalogo : {
-    top: 0,
+    top: 35,
     // left: -38,
     width: '120%',
     maxWidth: 500,
@@ -102,15 +113,21 @@ const styles = StyleSheet.create({
     // backgroundRepeat: no-repeat
   },
 phoneNumberIndication: {
-top: 55,
+top: 18,
+// '74'
 width: '64%',
-color: '#363739',
+color: 'black',
+// '#363739'
   fontSize: 11,
   //get font
   // font-family: "Montserrat",
   fontWeight: 600,
   lineHeight: 17,
 },
+bottomText: {
+  color: 'gray',
+  bottom: 50,
+}
 })
 ;
 export default SignInScreen

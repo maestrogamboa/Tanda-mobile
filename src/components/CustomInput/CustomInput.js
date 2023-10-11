@@ -28,21 +28,21 @@ const styles = StyleSheet.create ({
     paddingHorizontal: 30,
     marginBottom: 30,
     marginTop: 60,
+    bottom: 60,
    
     // figure out how to underline properly
   
     // textDecorationLine: 'underline',
     // borderBottomWidth: 1,
   
-    // textDecorationColor: '#e8e8e8',
-    
-    
-  
+    // textDecorationColor: '#e8e8e8',   
   },
+
   placeholderLine:{
     backgroundColor: '#e8e8e8',
     height:1
   },
+
   input: {},
 })
 
