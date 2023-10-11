@@ -33,7 +33,10 @@ const SignInScreen = () => {
         style = {[styles.tandalogo, {height: height * 0.45}]} 
         resizeMode = "contain"
       />
+      <View>
       <Text style = {styles.middleText}>Manage your rotational savings group</Text>
+      </View>
+
 
       <Text style = {styles.phoneNumberIndication}>Phone Number</Text>
       <CustomInput
@@ -49,14 +52,16 @@ const SignInScreen = () => {
         onPress= {onSignInPressed} 
       />
 
-      <CustomButton 
+<Text style = {styles.middleText}>Don't have an account?<Text> Sign up</Text></Text>
+
+      {/*<CustomButton 
         text= "Don't have an account?  Sign Up"  
         onPress= {onSignUpScreenOnePressed}
         type= "TERTIARY" 
          // need to change color of "Dont have an account"
         //  need to see about differentiating the reactivity of dont have an account and sign up
          
-      />
+  />*/}
 
       {/* <CustomButton
         text= "Don't have an account?"
@@ -76,17 +81,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     bottom: 25,
     padding : 1,
+    display:'flex',
+    justifyContent:'space-evenly',
+    height:'100%'
   },
   middleText: {
     color: 'gray',
-    top: -90
   },
   tandalogo : {
-    top: -6,
+    top: 0,
     // left: -38,
-    width: '110%',
-    maxWidth: 400,
-    maxHeight: 300,
+    width: '120%',
+    maxWidth: 500,
+    maxHeight: 400,
     borderRadius: 8,
     // chech for website size rendering
     // backgroundImage: url(./tandalogo.png),

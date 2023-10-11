@@ -11,8 +11,11 @@ const CustomInput = ({value, setValue, placeholder}) => {
       onChangeText={setValue}
       placeholder= {placeholder} 
       style = {styles.input}
-
       /> 
+       <View style={styles.placeholderLine}>
+      
+      </View>
+
 
     </View>
   )
@@ -29,12 +32,16 @@ const styles = StyleSheet.create ({
     // figure out how to underline properly
   
     // textDecorationLine: 'underline',
-    borderBottomWidth: 1,
+    // borderBottomWidth: 1,
   
     // textDecorationColor: '#e8e8e8',
-    borderBottomColor: '#e8e8e8',
+    
     
   
+  },
+  placeholderLine:{
+    backgroundColor: '#e8e8e8',
+    height:1
   },
   input: {},
 })
