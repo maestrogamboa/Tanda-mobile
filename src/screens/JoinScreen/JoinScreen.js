@@ -2,10 +2,13 @@ import { View, Text, StyleSheet } from 'react-native'
 import React, {useState} from 'react'
 import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton';
+import { useNavigation } from '@react-navigation/native'
 
 
 
 const JoinScreen = () => {
+  const navigation = useNavigation();
+
   const [joinCode, setjoinCode] = useState('');
 
   
@@ -34,13 +37,15 @@ const JoinScreen = () => {
       />
         
       <CustomButton 
+        type= "PRIMARY"
         text= "Join" 
         onPress= {onJoinBoxPressed} 
       />
 
-      <Text > or </Text>
+      <Text type = "TERTIARY"> or </Text>
 
       <CustomButton   
+        type= "SECONDARY"
         style= {styles.backToSignIn}
         text= "Create Tanda" 
         onPress= {onCreateTandaPressed} 
@@ -61,6 +66,7 @@ const styles = StyleSheet.create({
     display:'flex',
     justifyContent:'space-evenly',
     height:'100%',
+    backgroundColor: 'white',
   
   }, 
   title: {
