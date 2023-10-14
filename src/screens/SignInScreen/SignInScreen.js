@@ -1,8 +1,9 @@
-import { View, Text, Image, StyleSheet, useWindowDimensions,  ScrollView } from 'react-native'
+import { View, Text, Image, StyleSheet, useWindowDimensions, Button } from 'react-native'
 import React, {useState} from 'react'
 import Logo from '../../../assets/images/tandalogo.png'
 import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton';
+import Navigation from '../../navigation/index.js';
 
 
 
@@ -17,6 +18,8 @@ const SignInScreen = () => {
     
   const onSignUpScreenOnePressed = () => {
       console.warn("onSignUpScreenOnePressed");
+
+
     
   };
 
@@ -27,51 +30,48 @@ const SignInScreen = () => {
 
   
   return (
-  
-    <View style = {styles.root}>
-     <Image source={Logo}
-        style = {[styles.tandalogo, {height: height * 0.45}]} 
-        resizeMode = "contain"
-      />
-      
-      
-      <View>
-      <Text style = {styles.middleText}>Manage your rotational savings group</Text>
-      </View>
+
+    <><View>
+    </View><View style={styles.root}>
+        <Image source={Logo}
+          style={[styles.tandalogo, { height: height * 0.45 }]}
+          resizeMode="contain" />
 
 
-      <Text style = {styles.phoneNumberIndication}>Phone Number</Text>
-      <CustomInput
-        placeholder= "Your Phone Number"
-        value={phoneNumber} 
-        setValue={setPhoneNumber}
-        keyboardType = "numeric"
-        // figure out how to add Phone number
+        <View>
+          <Text style={styles.middleText}>Manage your rotational savings group</Text>
+        </View>
 
-        />
-      <CustomButton 
-        text= "Sign In" 
-        onPress= {onSignInPressed} 
-      />
 
-      <Text style = {styles.bottomText}>Don't have an account?<Text style= {styles.middleTextTertiary} onPress= {onSignUpScreenOnePressed} type= "TERTIARY" >  Sign up</Text></Text>
+        <Text style={styles.phoneNumberIndication}>Phone Number</Text>
+        <CustomInput
+          placeholder="Your Phone Number"
+          value={phoneNumber}
+          setValue={setPhoneNumber}
+          keyboardType="numeric" />
 
-      {/*<CustomButton 
-        text= "Don't have an account?  Sign Up"  
-        onPress= {onSignUpScreenOnePressed}
-        type= "TERTIARY" 
-         // need to change color of "Dont have an account"
-        //  need to see about differentiating the reactivity of dont have an account and sign up
-         
-  />*/}
+        <CustomButton
+          text="Sign In"
+          onPress={onSignInPressed} />
 
-      {/* <CustomButton
-        text= "Don't have an account?"
-        onPress= {onNoAccountPressed}
-        type= "TERTIARY"
-      /> */}
-        
-    </View>
+        <Text style={styles.bottomText}>Don't have an account?<Text style={styles.bottomTextTertiary} onPress={onSignUpScreenOnePressed} type="TERTIARY">  Sign up</Text></Text>
+
+        {/*<CustomButton
+  text= "Don't have an account?  Sign Up"
+  onPress= {onSignUpScreenOnePressed}
+  type= "TERTIARY"
+   // need to change color of "Dont have an account"
+  //  need to see about differentiating the reactivity of dont have an account and sign up
+   
+/>*/}
+
+        {/* <CustomButton
+  text= "Don't have an account?"
+  onPress= {onNoAccountPressed}
+  type= "TERTIARY"
+/> */}
+
+      </View></>
 
   )
 }
@@ -94,11 +94,6 @@ const styles = StyleSheet.create({
     bottom: 65,  
   },
 
-  middleTextTertiary: {
-    color: 'black',
-    fontWeight: 'bold',
-  },
-
   tandalogo : {
     top: 35,
     // left: -38,
@@ -106,11 +101,9 @@ const styles = StyleSheet.create({
     maxWidth: 500,
     maxHeight: 400,
     borderRadius: 8,
-    // chech for website size rendering
+    
     // backgroundImage: url(./tandalogo.png),
-  //  backgroundPosition: center,
-    // backgroundSize: cover,
-    // backgroundRepeat: no-repeat
+ 
   },
 phoneNumberIndication: {
 top: 18,
@@ -120,14 +113,17 @@ color: 'black',
 // '#363739'
   fontSize: 11,
   //get font
-  // font-family: "Montserrat",
+  // fontFamily: "WorkSans-Bold",
   fontWeight: 600,
   lineHeight: 17,
 },
+bottomTextTertiary: {
+    color: 'black',
+    fontWeight: 'bold',
+  },
 bottomText: {
   color: 'gray',
-  bottom: 50,
-}
+},
 })
 ;
 export default SignInScreen
