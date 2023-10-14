@@ -28,7 +28,7 @@ const styles = StyleSheet.create ({
     bottom: 90,
   },
   container_SECONDARY: {
-    backgroundColor: 'red',
+    backgroundColor: '#363b3e',
     width: '70%',
     bottom: 90,
   },

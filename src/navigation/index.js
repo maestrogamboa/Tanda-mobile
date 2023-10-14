@@ -22,12 +22,12 @@ const Navigation = () => {
             <Stack.Navigator screenOptions={{headerShown:false}}>
             <Stack.Screen name='SignInScreen' component={SignInScreen}/>
             <Stack.Screen name='SignUpScreen' component={SignUpScreen}/>
-            {/*<Stack.Screen name='JoinTanda' component={JoinScreen}/>
-             <Stack.Screen name='ConfirmNumber' component={ConfirmNumberScreen}/>           
+            <Stack.Screen name='JoinScreen' component={JoinScreen}/>
+            {/* <Stack.Screen name='ConfirmNumber' component={ConfirmNumberScreen}/>           
             <Stack.Screen name='Dashboard' component={DashboardScreen}/>
             <Stack.Screen name='AddParticipants' component={AddParticipantScreen}/>
             <Stack.Screen name='TandaSettings' component={TandaSettingsScreen}/>
-            <Stack.Screen name='SignUpTandaSettingsScreen' component={SignUpTandaSettingsScreen}/> */}
+            <Stack.Screen name='SignUpTandaSettingsScreen' component={SignUpTandaSettingsScreen}/>  */}
             </Stack.Navigator>
         </NavigationContainer>
         

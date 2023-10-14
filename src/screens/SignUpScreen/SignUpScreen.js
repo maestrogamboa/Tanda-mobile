@@ -16,6 +16,7 @@ const SignUpScreen = () => {
 
   const onSignUpBoxPressed = () => {
         console.warn("onSignUpBoxPressed");
+        navigation.navigate('JoinScreen');
     
   };
 
