@@ -1,6 +1,6 @@
 import { View, Text, Image, StyleSheet, useWindowDimensions, Button } from 'react-native'
 import React, {useState} from 'react'
-import Logo from '../../../assets/images/tandalogo.png'
+import Logo from '../../../assets/images/tandalogo2.png'
 import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton';
 import Navigation from '../../navigation/index.js';
@@ -42,12 +42,12 @@ const SignInScreen = () => {
       <View style={{ display:'flex', justifyContent:'center' }}>
         <View>
         <Image source={Logo}
-          style={[styles.tandalogo, { height: height * 0.45 }]}
+          style={[styles.tandalogo, { height: height * 0.15 }]}
            />
            
         </View>
 
-        <View  style={{ marginTop:-145 }}>
+        <View >
           <Text style={styles.middleText}>Manage your rotational savings group</Text>
         </View>
 
