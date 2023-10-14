@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import SignInScreen from '../screens/SignInScreen';
 import SignUpScreen from '../screens/SignUpScreen';
-import JoinScreen from '../screens/JoinScreen/JoinScreen';
+import JoinScreen from '../screens/JoinScreen';
 // import ConfirmNumberScreen from '../screens/ConfirmNumberScreen';
 // import DashboardScreen from '../screens/DashboardScreen';
 // import GroupSettings from '../components/GroupSettings';
@@ -18,12 +18,12 @@ const Stack = createStackNavigator()
 const Navigation = () => {
   
     return (
-        <NavigationContainer >
+        <NavigationContainer>
             <Stack.Navigator screenOptions={{headerShown:false}}>
-            <Stack.Screen name='SignIn' component={SignInScreen}/>
-            <Stack.Screen name='SignUp' component={SignUpScreen}/>
-            <Stack.Screen name='JoinTanda' component={JoinScreen}/>
-            {/* <Stack.Screen name='ConfirmNumber' component={ConfirmNumberScreen}/>           
+            <Stack.Screen name='SignInScreen' component={SignInScreen}/>
+            <Stack.Screen name='SignUpScreen' component={SignUpScreen}/>
+            {/*<Stack.Screen name='JoinTanda' component={JoinScreen}/>
+             <Stack.Screen name='ConfirmNumber' component={ConfirmNumberScreen}/>           
             <Stack.Screen name='Dashboard' component={DashboardScreen}/>
             <Stack.Screen name='AddParticipants' component={AddParticipantScreen}/>
             <Stack.Screen name='TandaSettings' component={TandaSettingsScreen}/>

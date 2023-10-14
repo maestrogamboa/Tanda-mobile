@@ -4,10 +4,15 @@ import Logo from '../../../assets/images/tandalogo.png'
 import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton';
 import Navigation from '../../navigation/index.js';
+import { useNavigation } from '@react-navigation/native'
+
 
 
 
 const SignInScreen = () => {
+
+  const navigation = useNavigation();
+  
   const [phoneNumber, setPhoneNumber] = useState('');
 
   const {height} = useWindowDimensions();
@@ -18,6 +23,7 @@ const SignInScreen = () => {
     
   const onSignUpScreenOnePressed = () => {
       console.warn("onSignUpScreenOnePressed");
+      navigation.navigate('SignUpScreen')
 
 
     
@@ -31,26 +37,35 @@ const SignInScreen = () => {
   
   return (
 
-    <><View>
-    </View><View style={styles.root}>
+    <>
+    <View style={styles.root}>
+      <View style={{ display:'flex', justifyContent:'center' }}>
+        <View>
         <Image source={Logo}
           style={[styles.tandalogo, { height: height * 0.45 }]}
-          resizeMode="contain" />
+           />
+           
+        </View>
 
-
-        <View>
+        <View  style={{ marginTop:-145 }}>
           <Text style={styles.middleText}>Manage your rotational savings group</Text>
         </View>
 
+      </View>
 
-        <Text style={styles.phoneNumberIndication}>Phone Number</Text>
-        <CustomInput
+        <View  style={{ width:'100%', display:'flex', alignItems:'center'}}>
+          <Text style={styles.phoneNumberIndication}>Phone Number</Text>
+          <CustomInput
           placeholder="Your Phone Number"
           value={phoneNumber}
           setValue={setPhoneNumber}
           keyboardType="numeric" />
 
+        </View>
+        
+
         <CustomButton
+        type="PRIMARY"
           text="Sign In"
           onPress={onSignInPressed} />
 
@@ -81,41 +96,41 @@ const SignInScreen = () => {
 const styles = StyleSheet.create({
   root: {
     alignItems: 'center',
-    bottom: 60,
+    flex:1,
     padding : 1,
     display:'flex',
     justifyContent:'space-evenly',
     height:'100%',
+    backgroundColor:'white'
   
   },
 
   middleText: {
     color: 'gray', 
-    bottom: 65,  
+ 
   },
 
   tandalogo : {
-    top: 35,
+    
     // left: -38,
-    width: '120%',
+    width: '100%',
     maxWidth: 500,
     maxHeight: 400,
-    borderRadius: 8,
+    height:100
     
     // backgroundImage: url(./tandalogo.png),
  
   },
 phoneNumberIndication: {
-top: 18,
-// '74'
 width: '64%',
 color: 'black',
 // '#363739'
-  fontSize: 11,
+  fontSize: 12,
   //get font
   // fontFamily: "WorkSans-Bold",
   fontWeight: 600,
-  lineHeight: 17,
+  paddingBottom:12
+
 },
 bottomTextTertiary: {
     color: 'black',

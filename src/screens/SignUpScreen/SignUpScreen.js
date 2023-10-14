@@ -7,6 +7,8 @@ import { useNavigation } from '@react-navigation/native'
 
 
 const SignUpScreen = () => {
+  const navigation = useNavigation();
+
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -19,7 +21,7 @@ const SignUpScreen = () => {
 
   const onBackToSignInPressed = () => {
     console.warn("onBackToSignInPressed")
-    useNavigation.navigate('SignInScreen')
+    navigation.navigate('SignInScreen')
   }
 
 
@@ -51,14 +53,15 @@ const SignUpScreen = () => {
 
         />
       <CustomButton 
+        type= "PRIMARY"
         text= "Sign Up" 
         onPress= {onSignUpBoxPressed} 
       />
 
       <CustomButton   
-        // type= {BACKTOSIGNIN}
+        type= "SECONDARY"
         text= "Back to Sign In" 
-        onPress= {onBackToSignInPressed} 
+        onPress= {onBackToSignInPressed}
       />
         
     </View>
@@ -71,11 +74,11 @@ const SignUpScreen = () => {
 const styles = StyleSheet.create({
   root: {
     alignItems: 'center',
-    bottom: 60,
     padding : 1,
     display:'flex',
     justifyContent:'space-evenly',
     height:'100%',
+    backgroundColor:'white'
   
   }, 
   title: {

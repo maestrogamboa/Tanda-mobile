@@ -9,8 +9,8 @@ import Navigation from './src/navigation';
 export default function App() {
   return (
 
-    <View style={styles.root}>
-      <SignUpScreen />
+    <View style={styles.container}>
+      {/*<SignUpScreen />*/}
       
       <Navigation />
       <StatusBar style="auto" />
@@ -21,10 +21,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    height:'100%',
-  
+
   },
 });
