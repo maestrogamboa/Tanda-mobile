@@ -26,8 +26,9 @@ const JoinScreen = () => {
   return (
   
     <View style = {styles.root}>
-       <View>
-      <Text style = {styles.joinTitle}>Joining an existing Tanda? Please provide join code</Text>
+       <View >
+      <Text style = {styles.joinTitle}>Joining an existing Tanda? </Text>
+      <Text style = {styles.joinTitle}>Please provide join code</Text>
       </View>
 
       <CustomInput
@@ -35,22 +36,24 @@ const JoinScreen = () => {
         value={joinCode} 
         setValue={setjoinCode}
       />
-        
+      
+     {/* <View> */}
       <CustomButton 
         type= "PRIMARY"
         text= "Join" 
         onPress= {onJoinBoxPressed} 
       />
-
-      <Text type = "TERTIARY"> or </Text>
-
-      <CustomButton   
+    
+    <Text style= {styles.orText}> or </Text> 
+      {/* </View>  */}
+     
+      <CustomButton  style= {styles.createTanda}
         type= "SECONDARY"
-        style= {styles.backToSignIn}
+        
         text= "Create Tanda" 
         onPress= {onCreateTandaPressed} 
       />
-        
+      
     </View>
 
   )
@@ -61,7 +64,7 @@ const JoinScreen = () => {
 const styles = StyleSheet.create({
   root: {
     alignItems: 'center',
-    bottom: 60,
+    // bottom: 60,
     padding : 1,
     display:'flex',
     justifyContent:'space-evenly',
@@ -78,6 +81,28 @@ const styles = StyleSheet.create({
     textAlign: 'center',
 
   },
+
+  joinTitle: {
+    fontWeight: '700',
+    fontSize: 15,
+    width: '100%',
+    
+  },
+
+  createTanda: {
+    backgroundColor: 'red',
+  },
+
+  orText: {
+    color: '#c0c0c0',
+  fontSize: 14,
+  // font-family: "Montserrat",
+  lineHeight: 14,
+  textAlign: 'center',
+  margin: -90,
+  bottom: 40,
+  },
+
   
 
 //   middleText: {

@@ -33,7 +33,7 @@ const SignUpScreen = () => {
       <View>
         <Text style = {styles.title}>Create an account</Text>
       </View>
-
+    
       <CustomInput
         placeholder= "First Name"
         value={firstName} 
@@ -51,13 +51,15 @@ const SignUpScreen = () => {
         setValue={setPhoneNumber}
         keyboardType = "numeric"
         // figure out how to add Phone number
-
         />
-      <CustomButton 
+        
+
+      <CustomButton style= {styles.signUpBtn}
         type= "PRIMARY"
         text= "Sign Up" 
         onPress= {onSignUpBoxPressed} 
       />
+      
 
       <CustomButton   
         type= "SECONDARY"
@@ -86,10 +88,14 @@ const styles = StyleSheet.create({
     color: '#030303',
     fontSize: 18,
     // font-family: "Montserrat",
-    fontWeight: 700,
-    lineHeight: 300,
+    fontWeight: '700',
+    lineHeight: 200,
     textAlign: 'center',
 
+  },
+
+  signUpBtn: {
+    
   },
 
 })

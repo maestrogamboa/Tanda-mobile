@@ -26,9 +26,9 @@ const styles = StyleSheet.create ({
     backgroundColor: 'white',
     width: '80%',
     paddingHorizontal: 30,
-    marginBottom: 30,
-    marginTop: 60,
-    bottom: 60,
+    marginBottom: 50,
+    marginTop: 10,
+    bottom: 35,
    
     // figure out how to underline properly
   

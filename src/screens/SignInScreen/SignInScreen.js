@@ -61,15 +61,17 @@ const SignInScreen = () => {
           setValue={setPhoneNumber}
           keyboardType="numeric" />
 
-        </View>
-        
-
-        <CustomButton
+       <CustomButton
         type="PRIMARY"
           text="Sign In"
           onPress={onSignInPressed} />
 
-        <Text style={styles.bottomText}>Don't have an account?<Text style={styles.bottomTextTertiary} onPress={onSignUpScreenOnePressed} type="TERTIARY">  Sign up</Text></Text>
+        </View>
+           
+
+        
+
+        <Text style={styles.bottomText}>Don't have an account?<Text style={styles.bottomTextTertiary} onPress={onSignUpScreenOnePressed} type="TERTIARY">    Sign up</Text></Text>
 
         {/*<CustomButton
   text= "Don't have an account?  Sign Up"

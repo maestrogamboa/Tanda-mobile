@@ -12,7 +12,7 @@ const CustomButton = ({ onPress,  text, type}) => {
 const styles = StyleSheet.create ({
   container: {
     // width affects sign up button
-    // width: '87%',
+    width: '100%',
     height: 46,
     padding: 13,
     marginVertical:10,
@@ -25,12 +25,16 @@ const styles = StyleSheet.create ({
   container_PRIMARY: {
     backgroundColor: '#4cd964',
     width: '70%',
-    bottom: 90,
+    // bottom: 90,
+    bottom: 45,
+    
   },
   container_SECONDARY: {
     backgroundColor: '#363b3e',
     width: '70%',
-    bottom: 90,
+    // bottom: 90,
+    bottom: 30, 
+   
   },
 
   container_TERTIARY: {
@@ -43,8 +47,6 @@ const styles = StyleSheet.create ({
       textAlign: 'center',
       marginTop: 60,
   },
-
-  
 
   text: {
     color: '#ffffff',
